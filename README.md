@@ -20,4 +20,6 @@ This should initiate a download of a NetCDF file with the desired data.
 
 # Data plotting example
 
-See code `plot_CMEMS_field.py`.
+See code `plot_CMEMS_field.py`. Executing this code should produce the following pdf:
+
+![CMEMS_SST_20210205_1200.pdf](CMEMS_SST_20210205_1200.pdf)
