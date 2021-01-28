@@ -51,4 +51,4 @@ See code `plot_CMEMS_timeseries.py`. Executing this code should produce the foll
 
 See code `plot_CMEMS_reanalysis.py`. Executing this code should produce the following pdf:
 
-![CMEMS_SSH_reanalysis.pdf](CMEMS_SSH_reanalysis.pdf)
+![CMEMS_SSH_rean_timeseries.pdf](CMEMS_SSH_rean_timeseries.pdf)
