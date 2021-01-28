@@ -37,18 +37,18 @@ This will initiate a download of parameter `zos` (sea surface height) in a time-
 
 ## Plot 2d SST field
 
-See code `plot_CMEMS_field.py`. Executing this code should produce the following pdf:
+See code `plot_CMEMS_field.py`. Executing this code should produce the following plot:
 
 ![CMEMS_SST_20210205_1200.png](CMEMS_SST_20210205_1200.png)
 
 ## Plot SST timeseries
 
-See code `plot_CMEMS_timeseries.py`. Executing this code should produce the following pdf:
+See code `plot_CMEMS_timeseries.py`. Executing this code should produce the following plot:
 
 ![CMEMS_SST_timeseries.png](CMEMS_SST_timeseries.png)
 
 ## Plot Sea Level Reanalysis timeseries
 
-See code `plot_CMEMS_reanalysis.py`. Executing this code should produce the following pdf:
+See code `plot_CMEMS_reanalysis.py`. Executing this code should produce the following plot:
 
 ![CMEMS_SSH_rean_timeseries.png](CMEMS_SSH_rean_timeseries.png)
