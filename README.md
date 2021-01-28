@@ -14,7 +14,7 @@ Let's retrieve sea surface temperature (SST) from forecast MEDSEA_ANALYSIS_FOREC
 
 After installing Motuclient, execute from command line:
 
-```motuclient --motu http://nrt.cmems-du.eu/motu-web/Motu --service-id MEDSEA_ANALYSIS_FORECAST_PHY_006_013-TDS --product-id med00-cmcc-tem-an-fc-d --longitude-min 12 --longitude-max 22 --latitude-min 36 --latitude-max 45.97916793823242 --date-min "2021-02-05 12:00:00" --date-max "2021-02-05 12:00:00" --depth-min 1.0181 --depth-max 1.0184 --variable thetao --out-dir OUTFILE_DIR --out-name OUTFILE_NAME --user USERNAME --pwd PASSWORD```
+```motuclient --motu http://nrt.cmems-du.eu/motu-web/Motu --service-id MEDSEA_ANALYSIS_FORECAST_PHY_006_013-TDS --product-id med00-cmcc-tem-an-fc-d --longitude-min 12 --longitude-max 22 --latitude-min 36 --latitude-max 45.97916793823242 --date-min "2021-02-05 12:00:00" --date-max "2021-02-05 12:00:00" --depth-min 1.0181 --depth-max 1.0184 --variable thetao --out-dir OUTFILE_DIR --out-name tmp.nc --user USERNAME --pwd PASSWORD```
 
 This should initiate a download of a NetCDF file with the desired data.
 
