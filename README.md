@@ -18,8 +18,18 @@ After installing Motuclient, execute from command line:
 
 This should initiate a download of a NetCDF file with the desired data.
 
-# Data plotting example
+To retrieve a longer timeseries, simply modify the time window in the query:
+
+```motuclient --motu http://nrt.cmems-du.eu/motu-web/Motu --service-id MEDSEA_ANALYSIS_FORECAST_PHY_006_013-TDS --product-id med00-cmcc-tem-an-fc-d --longitude-min 12 --longitude-max 22 --latitude-min 36 --latitude-max 45.97916793823242 --date-min "2020-02-05 12:00:00" --date-max "2021-02-05 12:00:00" --depth-min 1.0181 --depth-max 1.0184 --variable thetao --out-dir . --out-name tmp_1yr.nc --user USERNAME --pwd PASSWORD```
+
+# Data plotting example: plot 2d field
 
 See code `plot_CMEMS_field.py`. Executing this code should produce the following pdf:
 
 ![CMEMS_SST_20210205_1200.pdf](CMEMS_SST_20210205_1200.pdf)
+
+# Data plotting example: plot a timeseries
+
+See code `plot_CMEMS_timeseries.py`. Executing this code should produce the following pdf:
+
+![CMEMS_SST_timeseries.pdf](CMEMS_SST_timeseries.pdf)
