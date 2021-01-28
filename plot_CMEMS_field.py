@@ -53,9 +53,9 @@ def plot_field_on_map(lon2,lat2,time,field2d,figname):
 	gl.top_labels=gl.right_labels=False
 	# ax.xlines = True	
 	plt.savefig(figname,dpi=300,bbox_inches='tight')
-	print('Saved {}.'.format(figname))
+	print('Saved {}'.format(figname))
 
-homedir='/home/mlicer/projects/podnebnik/'
+homedir='/home/mlicer/projects/CMEMS_data/'
 ncfile='{}tmp.nc'.format(homedir)
 
 lon = read_nc_var(ncfile,'lon')
@@ -68,7 +68,7 @@ lon2,lat2=np.meshgrid(lon,lat)
 timestep=0
 timestr = datetime.strftime(time[timestep],'%Y%m%d_%H%M')
 print(timestr)
-figname='{}CMEMS_SST_{}.pdf'.format(homedir,timestr)
+figname='{}CMEMS_SST_{}.png'.format(homedir,timestr)
 plot_field_on_map(lon2,lat2,time[timestep],SST,figname)
 
 

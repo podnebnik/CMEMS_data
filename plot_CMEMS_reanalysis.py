@@ -71,7 +71,7 @@ SSHt = SSHt.set_index(['time'])
 # Add a 10-day rolling mean low-pass filter:
 SSH_lp = SSHt.resample('1Y').mean()
 
-figname='{}CMEMS_SSH_rean_timeseries.pdf'.format(homedir)
+figname='{}CMEMS_SSH_rean_timeseries.png'.format(homedir)
 
 plt.plot(SSHt.index,SSHt['SSH'],label='Monthly Mean SSH Anomaly')
 plt.plot(SSH_lp.index,SSH_lp['SSH'],label='1-year mean of SSH Anomaly')
