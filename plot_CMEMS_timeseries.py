@@ -35,32 +35,6 @@ def read_nc_datetimes(ncfile,time_varname):
 		print("Unknown units in NetCDF file!")
 		q()
 
-def plot_field_on_map(lon2,lat2,time,field2d,figname):
-
-	lonmin=np.min(lon2)
-	lonmax=np.max(lon2)
-	latmin=np.min(lat2)
-	latmax=np.max(lat2)
-
-	fig=plt.figure()
-	ax = fig.add_subplot(1, 1, 1, projection=ccrs.PlateCarree())
-	ax.set_extent([lonmin, lonmax, latmin, latmax], ccrs.PlateCarree())
-	ax.coastlines('10m')
-	im=ax.pcolor(lon2, lat2,field2d)
-
-	# ax.add_feature(cartopy.feature.OCEAN, zorder=0)
-	ax.add_feature(cartopy.feature.LAND, zorder=0, edgecolor='black')	
-	plt.colorbar(im,ax=ax,shrink=0.75)
-	print(time)
-	plt.title(datetime.strftime(time,'%d %b %Y %H:%M'))
-	# ax.xlabels_top = False
-	# ax.ylabels_right=False
-	gl=ax.gridlines(draw_labels=True,alpha=0.5, linestyle='--')
-	gl.top_labels=gl.right_labels=False
-	# ax.xlines = True	
-	plt.savefig(figname,dpi=300,bbox_inches='tight')
-	print('Saved {}.'.format(figname))
-
 def get_latlon_index(lon0,lat0,lon2,lat2):
 	# Returns i,j indices of (lon0,lat0) point in a (lon2,lat2) grid.
 	return np.argmin(np.abs(lon2[0,:]-lon0)),np.argmin(np.abs(lat2[:,0]-lat0))
