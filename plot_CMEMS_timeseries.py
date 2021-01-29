@@ -46,8 +46,7 @@ def get_latlon_index(lon0,lat0,lon2,lat2):
 # 	poly_order=2
 # 	return sg(y,sg_window,poly_order)
 
-homedir='/home/mlicer/projects/CMEMS_data/'
-ncfile='{}tmp_1yr.nc'.format(homedir)
+ncfile='tmp_1yr.nc'
 
 lon = read_nc_var(ncfile,'lon')
 lat = read_nc_var(ncfile,'lat')
@@ -71,7 +70,7 @@ SSTt = SSTt.set_index(['time'])
 # Add a 10-day rolling mean low-pass filter:
 SST_lp = SSTt.resample('10D',loffset='5D').mean()
 
-figname='{}CMEMS_SST_timeseries.png'.format(homedir)
+figname='CMEMS_SST_timeseries.png'
 
 plt.plot(SSTt.index,SSTt['SST'],label='SST')
 plt.plot(SST_lp.index,SST_lp['SST'],label='10-day mean of SST')

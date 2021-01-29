@@ -46,8 +46,7 @@ def get_latlon_index(lon0,lat0,lon2,lat2):
 # 	poly_order=2
 # 	return sg(y,sg_window,poly_order)
 
-homedir='/home/mlicer/projects/CMEMS_data/'
-ncfile='{}rean.nc'.format(homedir)
+ncfile='rean.nc'
 
 lon = read_nc_var(ncfile,'lon')
 lat = read_nc_var(ncfile,'lat')
@@ -71,7 +70,7 @@ SSHt = SSHt.set_index(['time'])
 # Add a 10-day rolling mean low-pass filter:
 SSH_lp = SSHt.resample('1Y').mean()
 
-figname='{}CMEMS_SSH_rean_timeseries.png'.format(homedir)
+figname='CMEMS_SSH_rean_timeseries.png'
 
 plt.plot(SSHt.index,SSHt['SSH'],label='Monthly Mean SSH Anomaly')
 plt.plot(SSH_lp.index,SSH_lp['SSH'],label='1-year mean of SSH Anomaly')

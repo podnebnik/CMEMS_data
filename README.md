@@ -5,7 +5,8 @@ Copernicus Marine Environment Monitoring Service  (CMEMS) data retrieval and plo
 # Data retrieval requirements
 
 * User account at https://marine.copernicus.eu/
-* Python [2.7, 3.6 or 3.7] (https://www.python.org/downloads/)
+* Python [2.7, 3.6 or 3.7]
+* Python packages numpy, pandas, matplotlib, netCDF4, cartopy
 * Motuclient [1.8 or higher] (https://marine.copernicus.eu/faq/what-are-the-motu-and-python-requirements/?idpage=169)
 
 # Data retrieval example
