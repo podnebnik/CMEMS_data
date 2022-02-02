@@ -27,10 +27,10 @@ plt.close()
 plt.figure(figsize=(15,15))
 plt.title('MSLR in Northern Adriatic')
 plt.plot(ssh.index,ssh['ssh_historical'],'k', linewidth=lwidth, label='MedCordex Reanalysis')# %%
-plt.plot(ssh.index,ssh['historical_rollmean_15yr'],'k', linewidth=lwidth2, alpha= alpha, label='15yr Rolling Mean Historical SSH')# %%
-plt.plot(ssh.index,ssh['tot_rcp85'],'orangered', linewidth=lwidth, label='Total SSH RCP8.5')# %%
+plt.plot(ssh.index,ssh['historical_rollmean_15yr'],'k', linewidth=lwidth2, alpha= alpha, label='15yr Rolling Mean Historical MSLR')# %%
+plt.plot(ssh.index,ssh['tot_rcp85'],'orangered', linewidth=lwidth, label='Total MSLR RCP8.5')# %%
 plt.plot(ssh.index,ssh['tot_rcp85_rollmean_15yr'],'orangered', linewidth=lwidth2, alpha=alpha, label='15yr Rolling Mean RCP8.5')# %%
-plt.plot(ssh.index,ssh['tot_rcp45'],'steelblue', linewidth=lwidth, label='Total SSH RCP4.5')# %%
+plt.plot(ssh.index,ssh['tot_rcp45'],'steelblue', linewidth=lwidth, label='Total MSLR RCP4.5')# %%
 plt.plot(ssh.index,ssh['tot_rcp45_rollmean_15yr'],'steelblue', linewidth=lwidth2, alpha=alpha,label='15yr Rolling Mean RCP4.5')# %%
 plt.xlabel('Year')
 plt.ylabel('MSLR [m]')
